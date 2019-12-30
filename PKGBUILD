@@ -1,5 +1,5 @@
 # Maintainer: Simon Walker <s.r.walker101@googlemail.com>
-pkgname=terraform-provider-kafka
+pkgname=terraform-provider-kafka-bin
 pkgrel=1
 pkgver=0.2.2
 epoch=
@@ -12,7 +12,7 @@ depends=()
 makedepends=("go")
 checkdepends=()
 optdepends=()
-provides=("${pkgname}")
+provides=("terraform-provider-kafka")
 conflicts=()
 replaces=()
 backup=()
@@ -26,6 +26,6 @@ validpgpkeys=()
 sha256sums=("6c88e922fb807622a3fa4de7b67f63abf64bae99a719ce6ff7d21d6417ac4d41")
 
 package() {
-    install -Dm755 ./${pkgname} "${pkgdir}/usr/bin/${pkgname}"
-    install -Dm644 ./LICENSE "${pkgdir}/usr/share/licenses/$pkgname/LICENSE"
+    install -Dm755 ./terraform-provider-kafka "${pkgdir}/usr/bin/terraform-provider-kafka"
+    install -Dm644 ./LICENSE "${pkgdir}/usr/share/licenses/terraform-provider-kafka/LICENSE"
 }
