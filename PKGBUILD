@@ -1,7 +1,7 @@
 # Maintainer: Simon Walker <s.r.walker101@googlemail.com>
 pkgname=terraform-provider-kafka-bin
 pkgrel=1
-pkgver=0.2.2
+pkgver=0.2.3
 epoch=
 pkgdesc="Provision kafka topics and ACLs with terraform"
 arch=("x86_64")
@@ -19,13 +19,13 @@ backup=()
 options=()
 install=
 changelog=
-source=("https://github.com/Mongey/terraform-provider-kafka/releases/download/v0.2.2/terraform-provider-kafka_0.2.2_linux_amd64.tar.gz")
+source=("https://github.com/Mongey/terraform-provider-kafka/releases/download/v0.2.3/terraform-provider-kafka_0.2.3_linux_amd64.tar.gz")
 noextract=()
 md5sums=()
 validpgpkeys=()
-sha256sums=("6c88e922fb807622a3fa4de7b67f63abf64bae99a719ce6ff7d21d6417ac4d41")
+sha256sums=("e992f11490166e88b9aadbb9c4153ebc54ca115476564539731914c3f77250a0")
 
 package() {
-    install -Dm755 ./terraform-provider-kafka "${pkgdir}/usr/bin/terraform-provider-kafka"
+    install -Dm755 ./terraform-provider-kafka_v0.2.3 "${pkgdir}/usr/bin/terraform-provider-kafka"
     install -Dm644 ./LICENSE "${pkgdir}/usr/share/licenses/terraform-provider-kafka/LICENSE"
 }
